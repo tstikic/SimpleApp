@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Test Application</string>
+    <string name="SUBTITLE_LIST_NAME">Subtitle name %s</string>
+</resources>
