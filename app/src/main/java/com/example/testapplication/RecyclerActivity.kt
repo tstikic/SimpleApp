@@ -20,7 +20,7 @@ class RecyclerActivity : AppCompatActivity() {
         recyclerView.setLayoutManager(LinearLayoutManager(this))
 
         // Sample data
-        val items: List<String> = mutableListOf("Item 1", "Item 2", "Item 3", "Item 4", "Item 5")
+        val items: List<String> = mutableListOf("Dan", "Andrei", "Eran", "Tijana", "Dorian", "Luciano", "Silvia", "Leandro")
         itemAdapter = ItemAdapter(items)
         recyclerView.setAdapter(itemAdapter)
     }

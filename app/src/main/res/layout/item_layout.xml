@@ -19,7 +19,7 @@
         android:id="@+id/item_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Subtitle name"
+        android:text="QA member"
         android:textSize="14sp"
         android:visibility="gone" /> <!-- Hidden by default -->
 </LinearLayout>
