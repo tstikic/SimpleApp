@@ -28,19 +28,21 @@ class LoginActivity : AppCompatActivity() {
 
 
         login_button.setOnClickListener {
-            errorMessageTextView.clearFocus()
+            errorMessageTextView.visibility = View.GONE
 
 
             if (username.text.toString().isEmpty()) {
-                errorMessageTextView.setVisibility(View.VISIBLE)
-                errorMessageTextView.error = "You need to enter username"
+                errorMessageTextView.visibility = View.GONE
+                username.error = getString(R.string.empty_username)
+                username.requestFocus()
             } else
                 if (password.text.toString().isEmpty()) {
-                    errorMessageTextView.setVisibility(View.VISIBLE)
-                    errorMessageTextView.error = "You need to enter password"
-
+                    errorMessageTextView.visibility = View.GONE
+                    password.error = getString(R.string.empty_password)
+                    password.requestFocus()
                 } else
                     if (username.text.toString() == "Admin" && password.text.toString() == "123456") {
+                        errorMessageTextView.visibility = View.GONE
                         val intent = Intent(this, HomeActivity::class.java)
 
                         startActivity(intent)
@@ -52,9 +54,10 @@ class LoginActivity : AppCompatActivity() {
                         ) {
                             username.text.clear()
                             password.text.clear()
-                            errorMessageTextView.clearFocus()
-                            errorMessageTextView.setVisibility(View.VISIBLE)
-                            errorMessageTextView.error = "Wrong password or username"
+                            errorMessageTextView.visibility = View.VISIBLE
+                            errorMessageTextView.error =
+                                getString(R.string.wrong_password_or_username)
+                            errorMessageTextView.requestFocus()
                         }
         }
 

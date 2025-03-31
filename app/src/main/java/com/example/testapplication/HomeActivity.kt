@@ -21,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
         val goToRecyclerViewButton = findViewById<Button>(R.id.go_to_recycler_view_button)
 
         goToRecyclerViewButton.setOnClickListener {
-            val intent = Intent(this@HomeActivity, RecyclerActivity::class.java)
+            val intent = Intent(this@HomeActivity, ScrollableActivity::class.java)
             startActivity(intent)
         }
 

@@ -56,18 +56,16 @@
         android:id="@+id/error_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/holo_red_dark"
-        android:visibility="gone"
-        android:text="Invalid username or password."
-        android:layout_marginTop="8dp"/>
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/password"
+        />
 
     <Button
         android:id="@+id/login_button"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@id/error_message"
+        android:layout_below="@id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
         android:background="@drawable/round_corners"

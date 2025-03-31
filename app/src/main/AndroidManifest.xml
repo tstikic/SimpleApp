@@ -20,6 +20,8 @@
         <!-- Declare HomeActivity -->
         <activity android:name=".HomeActivity"></activity>
         <activity android:name=".RecyclerActivity" />
+        <activity android:name=".ScrollableActivity" />
+
     </application>
 
 </manifest>
