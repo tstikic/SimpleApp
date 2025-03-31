@@ -28,7 +28,7 @@
             android:layout_below="@id/imageView5"
             android:contentDescription="Username:"
             android:ems="10"
-            android:hint="Username:"
+            android:hint="@string/username_hint_text"
             android:inputType="text"
             android:textColor="#000000"
             android:textColorHint="#D3D3D3"
@@ -45,7 +45,7 @@
             android:background="#11000000"
             android:contentDescription="Password:"
             android:ems="10"
-            android:hint="Password:"
+            android:hint="@string/password_hint_text"
             android:inputType="textPassword"
             android:textColor="#000000"
             android:textColorHint="#D3D3D3"
@@ -69,7 +69,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
         android:background="@drawable/round_corners"
-        android:text="Login"
+        android:text="@string/login_button_text"
         android:textColor="#FFFFFF"
 
         />
