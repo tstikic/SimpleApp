@@ -18,48 +18,53 @@
         app:srcCompat="@drawable/qa_logo" />
 
 
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:background="#11000000"
-            android:layout_below="@id/imageView5"
-            android:contentDescription="Username:"
-            android:ems="10"
-            android:hint="@string/username_hint_text"
-            android:inputType="text"
-            android:textColor="#000000"
-            android:textColorHint="#D3D3D3"
-            android:textSize="18sp" />
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/imageView5"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="#11000000"
+        android:contentDescription="Username:"
+        android:ems="10"
+        android:hint="@string/username_hint_text"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#D3D3D3"
+        android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_below="@id/username"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="23dp"
-            android:background="#11000000"
-            android:contentDescription="Password:"
-            android:ems="10"
-            android:hint="@string/password_hint_text"
-            android:inputType="textPassword"
-            android:textColor="#000000"
-            android:textColorHint="#D3D3D3"
-            android:textSize="18sp" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="23dp"
+        android:background="#11000000"
+        android:contentDescription="Password:"
+        android:ems="10"
+        android:hint="@string/password_hint_text"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#D3D3D3"
+        android:textSize="18sp" />
 
     <!-- Error Message Text -->
     <TextView
         android:id="@+id/error_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:layout_below="@+id/password"
-        />
+        android:layout_centerHorizontal="true"
+        android:drawableStart="@drawable/ic_error_smaller"
+        android:layout_below="@id/password"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/login_button"

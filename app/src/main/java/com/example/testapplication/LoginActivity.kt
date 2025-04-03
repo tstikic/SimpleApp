@@ -55,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
                             username.text.clear()
                             password.text.clear()
                             errorMessageTextView.visibility = View.VISIBLE
-                            errorMessageTextView.error =
+                            errorMessageTextView.text =
                                 getString(R.string.wrong_password_or_username)
                             errorMessageTextView.requestFocus()
                         }
