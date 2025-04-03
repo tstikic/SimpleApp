@@ -101,6 +101,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/start_learning_espresso_btn_text"
+            android:background="@drawable/round_corners"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
             android:layout_marginTop="80dp"/>
     </LinearLayout>
 </ScrollView>

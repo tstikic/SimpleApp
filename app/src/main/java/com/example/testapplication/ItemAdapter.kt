@@ -1,9 +1,12 @@
 package com.example.testapplication
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -18,6 +21,12 @@ class ItemAdapter(private val itemList: List<String>) :
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
+        holder.btnUploadDocuments.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, DocumentUploadActivity::class.java)
+            context.startActivity(intent)
+        }
+
         holder.nameTextView.text = itemList[position]
         val subtitle = java.lang.String.format(
             holder.itemView.context.getString(R.string.SUBTITLE_LIST_NAME),
@@ -51,6 +60,7 @@ class ItemAdapter(private val itemList: List<String>) :
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var nameTextView: TextView = itemView.findViewById<TextView>(R.id.item_name)
         var subtitleTextView: TextView = itemView.findViewById<TextView>(R.id.item_subtitle)
+        var btnUploadDocuments: Button = itemView.findViewById(R.id.upload_document_btn)
     }
 }
 

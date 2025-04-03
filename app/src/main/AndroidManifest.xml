@@ -21,7 +21,9 @@
         <activity android:name=".HomeActivity"></activity>
         <activity android:name=".RecyclerActivity" />
         <activity android:name=".ScrollableActivity" />
-
+        <activity android:name=".DocumentUploadActivity" />
+        <activity android:name=".ComposeActivity" />
+        <activity android:name="androidx.activity.ComponentActivity" />
     </application>
 
 </manifest>
