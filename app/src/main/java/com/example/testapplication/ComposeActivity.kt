@@ -1,5 +1,6 @@
 package com.example.testapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -33,14 +34,16 @@ class ComposeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ComposeScreen()
+            ComposeScreen(onNotificationClick = {
+                val intent = Intent(this, NotificationsActivity::class.java)
+                startActivity(intent)
+            })
         }
     }
 }
 
 @Composable
-fun ComposeScreen() {
-    var showText = remember { mutableStateOf(false) }
+fun ComposeScreen(onNotificationClick: () -> Unit) {
     var inputText by remember { mutableStateOf("") }
     var submittedText by remember { mutableStateOf("") }
 
@@ -51,38 +54,15 @@ fun ComposeScreen() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(
-            "Welcome to Compose!",
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold
-        )
+        Text("Welcome to Compose!", fontSize = 24.sp, fontWeight = FontWeight.Bold)
 
         Image(
             painter = painterResource(id = R.drawable.image1),
-            contentDescription = "",
+            contentDescription = null,
             modifier = Modifier
                 .size(150.dp)
                 .testTag(IMAGE_TEST_TAG)
         )
-
-        Button(onClick = {
-            // Toggle the visibility of the text when the button is clicked
-            showText.value = !showText.value
-        }) {
-            Text(
-                text = "Click Me",
-                modifier = Modifier.testTag(BUTTON_TEXT_TEST_TAG)
-            )
-        }
-
-        // Conditionally show the text when the button is clicked
-        if (showText.value) {
-            Text(
-                "You clicked the button!",
-                fontSize = 18.sp,
-                modifier = Modifier.padding(top = 20.dp)
-            )
-        }
 
         Spacer(modifier = Modifier.height(32.dp))
 
@@ -95,13 +75,10 @@ fun ComposeScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        Button(onClick = {
-            submittedText = inputText
-        }) {
+        Button(onClick = { submittedText = inputText }) {
             Text("Submit Text")
         }
 
-        // Display submitted text
         if (submittedText.isNotBlank()) {
             Text(
                 text = "You typed: $submittedText",
@@ -110,14 +87,23 @@ fun ComposeScreen() {
             )
         }
 
+        Spacer(modifier = Modifier.height(56.dp))
+
+        Text("Click this button to open next screen:", fontSize = 15.sp)
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(onClick = onNotificationClick) {
+            Text(text = "Click Me", modifier = Modifier.testTag(BUTTON_TEXT_TEST_TAG))
+        }
     }
 }
 
-const val IMAGE_TEST_TAG = "udhufhufhu"
+const val IMAGE_TEST_TAG = "imageTestTag"
 const val BUTTON_TEXT_TEST_TAG = "buttonTextTestTag"
 
 @Preview(showBackground = true)
 @Composable
 fun PreviewComposeScreen() {
-    ComposeScreen()
+    ComposeScreen(onNotificationClick = {})
 }
