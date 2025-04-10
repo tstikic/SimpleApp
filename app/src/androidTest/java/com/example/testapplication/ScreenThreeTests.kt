@@ -36,18 +36,25 @@ class ScreenThreeTests {
 
     @After
     fun tearDown() {
-        Intents.init()
+        Intents.release()
     }
 
     @Test
     fun checkThirdScreenElements() {
         onView(withId(R.id.title_text)).check(matches(withText(R.string.why_testing_matters_title)))
+        onView(withId(R.id.intro_text)).check(matches(withText(R.string.why_testing_matters_body)))
 
         onView(withId(R.id.carousel_text)).check(matches(withText("Android Testing")))
         onView(withId(R.id.carousel)).perform(swipeLeft())
         onView(allOf(withId(R.id.carousel_text), withText("iOS testing"))).check(matches(isDisplayed()))
         onView(withId(R.id.carousel)).perform(swipeLeft())
         onView(allOf(withId(R.id.carousel_text), withText("Web browser testing"))).check(matches(isDisplayed()))
+
+        onView(withId(R.id.manual_vs_auto_title)).check(matches(withText(R.string.manual_vs_automated_testing_title)))
+        onView(withId(R.id.manual_testing_text)).check(matches(withText(R.string.manual_vs_automated_testing_body)))
+        onView(withId(R.id.automated_testing_text)).check(matches(withText(R.string.manual_vs_automated_testing_body2)))
+        onView(withId(R.id.espresso_title)).check(matches(withText(R.string.espresso_for_android_title)))
+        onView(withId(R.id.espresso_advanced_text)).check(matches(withText(R.string.espresso_subtext)))
 
         onView(withId(R.id.start_learning_button)).perform(scrollTo(), click())
 
