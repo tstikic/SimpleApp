@@ -40,6 +40,35 @@ class LoginTests {
         onView(withId(R.id.username)).check(matches(hasErrorText(getTextFromStringResource(R.string.empty_username))))
     }
 
+    @Test
+    fun checkEmptyPasswordUnsuccessfulLogin(){
+        onView(withId(R.id.username)).perform((typeText(username)))
+        onView(withId(R.id.login_button)).perform(click())
+        onView(withId(R.id.password)).check(matches(hasErrorText(getTextFromStringResource(R.string.empty_password))))
+    }
+
+    @Test
+    fun checkEmptyCredentialsUnsuccessfulLogin(){
+        onView(withId(R.id.login_button)).perform(click())
+        onView(withId(R.id.username)).check(matches(hasErrorText(getTextFromStringResource(R.string.empty_username))))
+    }
+
+    @Test
+    fun checkWrongUsernameUnsuccessfulLogin(){
+        onView(withId(R.id.username)).perform((typeText("abcd")))
+        onView(withId(R.id.password)).perform(typeText(password))
+        onView(withId(R.id.login_button)).perform(click())
+        onView(withId(R.id.error_message)).check(matches(hasErrorText(getTextFromStringResource(R.string.wrong_password_or_username))))
+    }
+
+    @Test
+    fun checkWrongPasswordUnsuccessfulLogin(){
+        onView(withId(R.id.username)).perform((typeText(username)))
+        onView(withId(R.id.password)).perform(typeText("654321"))
+        onView(withId(R.id.login_button)).perform(click())
+        onView(withId(R.id.error_message)).check(matches(withText(getTextFromStringResource(R.string.wrong_password_or_username))))
+    }
+
     private fun getTextFromStringResource(stringResource: Int) =
         InstrumentationRegistry.getInstrumentation().targetContext.getString(stringResource)
 }
