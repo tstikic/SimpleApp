@@ -1,5 +1,6 @@
 package com.example.testapplication
 
+import android.app.Activity
 import android.app.Instrumentation
 import android.content.Intent
 import android.provider.MediaStore
@@ -9,6 +10,8 @@ import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.intent.Intents
+import androidx.test.espresso.intent.Intents.intending
+import androidx.test.espresso.intent.matcher.IntentMatchers
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasExtra
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasPackage
@@ -51,14 +54,17 @@ class DocumentUploadScreenTest {
         onView(withId(R.id.input_address)).check(matches(withHint("Enter your address")))
         onView(withId(R.id.input_address)).perform(typeText("Plaza de Honduras"))
 
+        intending(hasAction(Intent.ACTION_VIEW)).respondWith(Instrumentation.ActivityResult(Activity.RESULT_OK, null))
         onView(withId(R.id.button_open_maps)).perform(click())
         Intents.intended(hasPackage("com.google.android.apps.maps"))
 
         onView(withId(R.id.input_document_id)).check(matches(withHint("Enter document ID")))
         onView(withId(R.id.input_document_id)).perform(typeText("12345678P"))
 
-        onView(withText("Take a picture of your document:")).check(matches(isDisplayed()))
+        intending(hasAction(MediaStore.ACTION_IMAGE_CAPTURE)).respondWith(Instrumentation.ActivityResult(Activity.RESULT_OK, null))
         onView(withId(R.id.button_open_camera)).perform(click())
         Intents.intended(hasAction(MediaStore.ACTION_IMAGE_CAPTURE))
+
+        onView(withText("Take a picture of your document:")).check(matches(isDisplayed()))
     }
 }
