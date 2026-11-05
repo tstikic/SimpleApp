@@ -3,34 +3,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/card_overlay"
+    android:elevation="2dp"
     android:orientation="vertical"
     android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="16dp">
+        android:orientation="horizontal">
 
         <!-- Main item text -->
         <TextView
             android:id="@+id/item_name"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
             android:text="Item Name"
-            android:textSize="18sp" />
+            android:textColor="@color/text_on_dark_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/upload_document_btn"
+            style="@style/Widget.App.Button.Outline"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_corners"
+            android:layout_height="40dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:text="Add data"
-            android:textColor="#FFFFFF"
-            android:textSize="10sp"
-            />
+            android:textSize="13sp" />
     </LinearLayout>
 
     <!-- Expanded subtitle, initially hidden -->
@@ -38,9 +42,10 @@
         android:id="@+id/item_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:text="QA member"
+        android:textColor="@color/text_on_dark_secondary"
         android:textSize="14sp"
         android:visibility="gone" />
 
-    </LinearLayout>
-
+</LinearLayout>

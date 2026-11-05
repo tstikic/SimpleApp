@@ -14,6 +14,8 @@
     <string name="empty_password">You need to enter password</string>
     <string name="wrong_password_or_username">Wrong password or username</string>
     <string name="welcome_qa_family">Welcome QA Family!</string>
+    <string name="home_learning_subtitle">Let\'s learn how to test it all! This app walks you through Espresso UI flows, Intents, UI Automator, notifications, and Jetpack Compose testing — one screen at a time.</string>
+    <string name="scrollable_screen_btn_text">Hop to Scrollable Screen</string>
     <string name="login_button_text">Login</string>
     <string name="password_hint_text">Password:</string>
     <string name="username_hint_text">Username:</string>

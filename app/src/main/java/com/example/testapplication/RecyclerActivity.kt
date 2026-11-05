@@ -2,6 +2,7 @@ package com.example.testapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +18,10 @@ class RecyclerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler)
 
-        val items = listOf("Dan", "Andrei", "Eran", "Tijana", "Dorian", "Luciano", "Silvia", "Leandro")
+        findViewById<View>(R.id.app_header).padForStatusBar()
+        findViewById<View>(R.id.bottom_bar).padForNavigationBar()
+
+        val items = listOf("Dan", "Roxana", "Tijana", "Dorian", "Silvia", "Leandro")
 
         itemAdapter = ItemAdapter(items)
 

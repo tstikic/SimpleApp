@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#013a63</color>
-    <color name="purple_500">#2c7da0</color>
-    <color name="purple_700">#013a63</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <!-- Brand -->
+    <color name="purple_200">#6FB3DE</color>
+    <color name="purple_500">#2A6F9E</color>
+    <color name="purple_700">#0B3B5C</color>
+    <color name="teal_200">#4FD8C9</color>
+    <color name="teal_700">#0E7490</color>
+    <color name="accent">#FF6B47</color>
+    <color name="accent_pressed">#E6522F</color>
+    <color name="error">#D64545</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Neutral surface tokens (overridden for dark mode in values-night) -->
+    <color name="background">#F4F6F9</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="text_primary">#1B1F24</color>
+    <color name="text_secondary">#5B6472</color>
+    <color name="divider">#E2E6EB</color>
+    <color name="input_background">#EEF1F5</color>
+    <color name="input_border">#D7DCE3</color>
+
+    <!-- Text/tint for content sitting directly on the dark navy page background (not inside a white card). -->
+    <color name="text_on_dark_primary">#FFFFFFFF</color>
+    <color name="text_on_dark_secondary">#C7D4E0</color>
+    <color name="divider_on_dark">#33FFFFFF</color>
 </resources>

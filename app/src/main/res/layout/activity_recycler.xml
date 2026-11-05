@@ -2,34 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login_background"
     android:orientation="vertical">
+
+    <include layout="@layout/app_header" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        />
+        android:clipToPadding="false"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp" />
 
     <View
+        android:id="@+id/shadow_view"
         android:layout_width="match_parent"
         android:layout_height="4dp"
-        android:id="@+id/shadow_view"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/shadow"
-        app:layout_constraintTop_toBottomOf="@id/recycler_view"
-        app:layout_constraintBottom_toTopOf="@id/compose_screen_btn"/>
+        android:background="@drawable/shadow" />
 
-    <Button
-        android:id="@+id/compose_screen_btn"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="8dp"
-        android:text="Open Compose Screen"
-        android:background="@drawable/round_corners"
-        android:textColor="#FFFFFF"
-        android:textSize="10sp"
-        android:layout_gravity="center_horizontal" />
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <Button
+            android:id="@+id/compose_screen_btn"
+            style="@style/Widget.App.Button"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Open Compose Screen" />
+    </LinearLayout>
 </LinearLayout>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,9 @@ class DocumentUploadActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.document_upload)
+
+        findViewById<View>(R.id.app_header).padForStatusBar()
+        findViewById<View>(R.id.document_upload_scroll).padForNavigationBar()
 
         val addressInput: EditText = findViewById(R.id.input_address)
         val buttonOpenMaps: Button = findViewById(R.id.button_open_maps)

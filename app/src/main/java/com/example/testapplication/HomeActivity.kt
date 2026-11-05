@@ -1,6 +1,7 @@
 package com.example.testapplication
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -14,6 +15,9 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_activity)
+
+        findViewById<View>(R.id.app_header).padForStatusBar()
+        findViewById<View>(R.id.home_content).padForNavigationBar()
 
         // Initialize UI components
         welcomeTextView = findViewById<TextView>(R.id.welcome_text)

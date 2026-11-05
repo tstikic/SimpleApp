@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark-mode overrides for the neutral surface tokens defined in values/colors.xml -->
+    <color name="background">#11151C</color>
+    <color name="surface">#1C212B</color>
+    <color name="text_primary">#F2F4F7</color>
+    <color name="text_secondary">#AAB2BF</color>
+    <color name="divider">#2A313D</color>
+    <color name="input_background">#242A35</color>
+    <color name="input_border">#333B47</color>
+</resources>
