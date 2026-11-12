@@ -13,7 +13,7 @@ class ScrollableActivity : AppCompatActivity() {
         setContentView(R.layout.activity_scrollable)
 
         findViewById<View>(R.id.app_header).padForStatusBar()
-        findViewById<View>(R.id.scrollable_content).padForNavigationBar()
+        findViewById<View>(R.id.scrollable_root).padForNavigationBar()
 
         val carousel: ViewPager2 = findViewById(R.id.carousel)
 
