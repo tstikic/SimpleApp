@@ -12,4 +12,9 @@ class HomePageTest {
     var scenarioRule = ActivityScenarioRule(HomeActivity::class.java)
 
 
+    // Test for checkHomePageScreen() goes here:
+    // 1. Image is displayed
+    // 2. Title is displayed
+    // 3. Body text is displayed
+    // 4. Button with correct text and clickable action is displayed
 }
