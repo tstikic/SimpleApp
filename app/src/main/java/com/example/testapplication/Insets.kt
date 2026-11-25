@@ -24,3 +24,14 @@ fun View.padForNavigationBar() {
         insets
     }
 }
+
+/** Pads this view so its content clears both the status bar and the navigation bar. */
+fun View.padForSystemBars() {
+    val initialTop = paddingTop
+    val initialBottom = paddingBottom
+    ViewCompat.setOnApplyWindowInsetsListener(this) { v, insets ->
+        val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+        v.updatePadding(top = initialTop + bars.top, bottom = initialBottom + bars.bottom)
+        insets
+    }
+}

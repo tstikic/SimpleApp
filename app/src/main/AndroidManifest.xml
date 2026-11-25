@@ -26,6 +26,9 @@
         <activity android:name=".ComposeActivity" />
         <activity android:name="androidx.activity.ComponentActivity" />
         <activity android:name=".NotificationsActivity" />
+        <activity android:name=".WorkshopJoinActivity" />
+        <activity android:name=".WorkshopWelcomeActivity" />
+        <activity android:name=".WorkshopSuccessActivity" />
 
     </application>
 

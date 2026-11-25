@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Same as workshop_input_background, with a red border to flag a validation error. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="12dp" />
+    <solid android:color="@color/surface" />
+    <stroke
+        android:width="1.5dp"
+        android:color="@color/error" />
+</shape>

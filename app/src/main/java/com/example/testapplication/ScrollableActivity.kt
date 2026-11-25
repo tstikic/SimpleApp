@@ -43,7 +43,7 @@ class ScrollableActivity : AppCompatActivity() {
         // Start Learning Espresso Button
         val startLearningButton: Button = findViewById(R.id.start_learning_button)
         startLearningButton.setOnClickListener {
-            val intent = Intent(this, RecyclerActivity::class.java)
+            val intent = Intent(this, WorkshopJoinActivity::class.java)
             startActivity(intent)
         }
     }

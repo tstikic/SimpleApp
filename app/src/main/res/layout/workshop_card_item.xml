@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- workshop_card_item.xml - one page of the Welcome screen carousel -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/workshop_card_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/workshop_card_icon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="@null"
+            tools:src="@drawable/ic_workshop_book" />
+
+        <TextView
+            android:id="@+id/workshop_card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="@string/workshop_card_1_title" />
+
+        <TextView
+            android:id="@+id/workshop_card_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            tools:text="@string/workshop_card_1_description" />
+    </LinearLayout>
+
+</FrameLayout>

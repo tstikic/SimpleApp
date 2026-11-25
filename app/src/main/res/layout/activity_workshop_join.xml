@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workshop_join_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    android:focusableInTouchMode="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".WorkshopJoinActivity">
+
+    <ImageView
+        android:id="@+id/workshop_join_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_workshop_school" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/workshop_join_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/workshop_join_title"
+        android:textColor="@color/text_primary"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/workshop_join_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/workshop_join_subtitle"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp" />
+
+    <!-- Access Code input -->
+    <TextView
+        android:id="@+id/access_code_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:labelFor="@id/access_code_input"
+        android:text="@string/workshop_access_code_label"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/access_code_input"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:importantForAutofill="no"
+        android:background="@drawable/workshop_input_background"
+        android:hint="@string/workshop_access_code_hint"
+        android:imeOptions="actionDone"
+        android:inputType="text|textNoSuggestions"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_secondary"
+        android:textSize="16sp" />
+
+    <!-- Error Message Text (shown below the input when validation fails) -->
+    <TextView
+        android:id="@+id/access_code_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/error"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:text="@string/workshop_error_code_invalid"
+        tools:visibility="visible" />
+
+    <!-- Always enabled, so tapping it with an empty field triggers validation -->
+    <Button
+        android:id="@+id/continue_button"
+        style="@style/Widget.App.Button.Workshop"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/workshop_continue_btn_text" />
+
+</LinearLayout>

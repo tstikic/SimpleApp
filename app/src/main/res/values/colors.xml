@@ -25,4 +25,11 @@
     <color name="text_on_dark_primary">#FFFFFFFF</color>
     <color name="text_on_dark_secondary">#C7D4E0</color>
     <color name="divider_on_dark">#33FFFFFF</color>
+
+    <!-- Workshop exercise screens (Join / Welcome / Success) -->
+    <color name="workshop_primary">#3B63E0</color>
+    <color name="workshop_primary_pressed">#2F4FB8</color>
+    <color name="workshop_card">#EEF4FD</color>
+    <color name="workshop_dot_unselected">#C9D0DB</color>
+    <color name="workshop_success">#22A06B</color>
 </resources>

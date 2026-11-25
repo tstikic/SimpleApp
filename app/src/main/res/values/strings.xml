@@ -19,4 +19,35 @@
     <string name="login_button_text">Login</string>
     <string name="password_hint_text">Password:</string>
     <string name="username_hint_text">Username:</string>
+
+    <!-- Workshop exercise: Screen 1 - Join the Workshop -->
+    <string name="workshop_join_title">Join the Workshop</string>
+    <string name="workshop_join_subtitle">Enter your access code to continue.</string>
+    <string name="workshop_access_code_label">Access Code</string>
+    <string name="workshop_access_code_hint">Enter your access code</string>
+    <string name="workshop_continue_btn_text">Continue</string>
+    <string name="workshop_error_code_required">Access code is required</string>
+    <string name="workshop_error_code_too_short">Access code must be at least 6 characters</string>
+    <string name="workshop_error_code_invalid">Invalid access code</string>
+
+    <!-- Workshop exercise: Screen 2 - Welcome to the Workshop -->
+    <string name="workshop_welcome_title">Welcome to the Workshop</string>
+    <string name="workshop_card_1_title">Track your learning</string>
+    <string name="workshop_card_1_description">Keep track of your learning journey.</string>
+    <string name="workshop_card_2_title">Practice test cases</string>
+    <string name="workshop_card_2_description">Improve your automation skills through practical exercises.</string>
+    <string name="workshop_card_3_title">Review your progress</string>
+    <string name="workshop_card_3_description">See what you have learned and achieved.</string>
+    <string name="workshop_swipe_hint">Swipe horizontally</string>
+    <string name="workshop_about_title">About the Workshop</string>
+    <string name="workshop_about_body">Welcome to our QA Automation Workshop! During this workshop, you will learn how to write automated tests, interact with UI elements, validate expected results and work with Git.</string>
+    <string name="workshop_scroll_hint">Scroll down to continue</string>
+    <string name="workshop_practice_body">You will practice different scenarios, including positive and negative test cases, navigation, swipe gestures and scrolling.</string>
+    <string name="workshop_ready_body">Once you are ready, click Get Started to begin your learning journey.</string>
+    <string name="workshop_get_started_btn_text">Get Started</string>
+
+    <!-- Workshop exercise: Screen 3 - Success -->
+    <string name="workshop_success_title">You\'re ready to start!</string>
+    <string name="workshop_success_description">You have successfully completed the introduction.</string>
+    <string name="workshop_recycler_btn_text">Jump into Recycler Views</string>
 </resources>
