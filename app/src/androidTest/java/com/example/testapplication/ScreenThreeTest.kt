@@ -47,7 +47,8 @@ class ScreenThreeTest {
             .perform(scrollTo(), click())
 
         // verify screen is displayed bla bla
-        onView(withId(R.id.workshop_join_root)).check(matches(isDisplayed()))
+        onView(withId(R.id.workshop_join_root))
+            .check(matches(isDisplayed()))
     }
 
 
